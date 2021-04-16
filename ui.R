@@ -1880,7 +1880,7 @@ shinyUI(fluidPage(theme = shinytheme("readable"),
                     teams, individudal match, head-to-head and overall team performances"),
              p("This Shiny app 'GooglyPlusPlus2021' has been designed and developed by  Tinniam V Ganesh,Jan 07,2021"),
              p("This data includes the all the latest data including IPL 2020, CPL 2020, NTB 2020, BBL 2020-21"),
-             p("Daily updates from IPL 2021, updated with IPL2021 matches till 12 Apr 2021"),
+             p("Daily updates from IPL 2021, updated with IPL2021 matches till 15 Apr 2021"),
              p("The data for this Shiny app has been taken from Cricsheet - http://http://cricsheet.org/"),
              p("More details about this app and for other posts, see my blog
                     https://gigadom.in/"),
