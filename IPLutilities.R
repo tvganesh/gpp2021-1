@@ -12,27 +12,30 @@ library(dplyr)
 # Run this function first. This is imporant to create the data sets
 getIPLBatsmen <- function(dir="."){
   teams <-c("Chennai Super Kings","Deccan Chargers","Delhi Capitals","Delhi Daredevils",
-            "Kings XI Punjab", "Punjab Kings", 'Kochi Tuskers Kerala',"Kolkata Knight Riders",
+            "Kings XI Punjab",  'Kochi Tuskers Kerala',"Kolkata Knight Riders",
             "Mumbai Indians", "Pune Warriors","Rajasthan Royals",
             "Royal Challengers Bangalore","Sunrisers Hyderabad","Gujarat Lions",
-            "Rising Pune Supergiants")
+            "Rising Pune Supergiants","Punjab Kings")
 
   cwd=getwd()
   print("iplbatsmen")
   cat("iplbats=",cwd)
   battingDF <- NULL
+  setNext <- FALSE
   for(team in teams){
     battingDetails <- NULL
     val <- paste(dir,"/",team,"-BattingDetails.RData",sep="")
     print(val)
     tryCatch(load(val),
-             error = function(e) {
-               print("No data1")
-               setNext=TRUE
-             }
-
+               error = function(e) {
+                 print("No data1")
+                 setNext <- TRUE
+               }
 
     )
+    if(setNext)
+        next
+
     details <- battingDetails
 
     # Save individual team batsmen separately
@@ -106,10 +109,10 @@ getTeamIndex <- function(batsman,dir="."){
 
 getIPLBowlers <- function(dir="."){
   teams <-c("Chennai Super Kings","Deccan Chargers","Delhi Capitals","Delhi Daredevils",
-            "Kings XI Punjab", "Punjab Kings", 'Kochi Tuskers Kerala',"Kolkata Knight Riders",
+            "Kings XI Punjab",  'Kochi Tuskers Kerala',"Kolkata Knight Riders",
             "Mumbai Indians", "Pune Warriors","Rajasthan Royals",
             "Royal Challengers Bangalore","Sunrisers Hyderabad","Gujarat Lions",
-            "Rising Pune Supergiants")
+            "Rising Pune Supergiants","Punjab Kings")
 
   cwd=getwd()
   cat("bowlers=",cwd,"\n")
@@ -119,14 +122,18 @@ getIPLBowlers <- function(dir="."){
     bowlingDetails <- NULL
     val <- paste(dir,"/",team,"-BowlingDetails.RData",sep="")
     print(val)
-    tryCatch(load(val),
-             error = function(e) {
-               print("No data1")
-               setNext=TRUE
-             }
-
-
-    )
+    if(file.exists(val)){
+      tryCatch(load(val),
+               error = function(e) {
+                 print("No data1")
+                 setNext=TRUE
+               }
+  
+  
+      )
+    }else {
+      next
+    }
     details <- bowlingDetails
     # Save individual team batsmen separately
     df1 <- select(details,bowler,economyRate)
