@@ -26,7 +26,7 @@ IPLTeamsAll <- gsub(".RData","",a2)
 
 # IPL Team names
 IPLTeamNames <- list("Chennai Super Kings","Deccan Chargers","Delhi Capitals", "Delhi Daredevils",
-                     "Punjab Kings", 'Kochi Tuskers Kerala',"Kolkata Knight Riders",
+                     "Kings XI Punjab","Punjab Kings", 'Kochi Tuskers Kerala',"Kolkata Knight Riders",
                      "Mumbai Indians", "Pune Warriors","Rajasthan Royals",
                      "Royal Challengers Bangalore","Sunrisers Hyderabad","Gujarat Lions",
                      "Rising Pune Supergiants")

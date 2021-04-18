@@ -12,7 +12,7 @@ library(dplyr)
 # Run this function first. This is imporant to create the data sets
 getIPLBatsmen <- function(dir="."){
   teams <-c("Chennai Super Kings","Deccan Chargers","Delhi Capitals","Delhi Daredevils",
-            "Punjab Kings", 'Kochi Tuskers Kerala',"Kolkata Knight Riders",
+            "Kings XI Punjab", "Punjab Kings", 'Kochi Tuskers Kerala',"Kolkata Knight Riders",
             "Mumbai Indians", "Pune Warriors","Rajasthan Royals",
             "Royal Challengers Bangalore","Sunrisers Hyderabad","Gujarat Lions",
             "Rising Pune Supergiants")
@@ -62,7 +62,7 @@ getIPLBatsmen <- function(dir="."){
 # Get the team indices of IPL teams for which the bowler as played
 getTeamIndex <- function(batsman,dir="."){
   teams <-c("Chennai Super Kings","Deccan Chargers","Delhi Capitals","Delhi Daredevils",
-                                              "Punjab Kings", 'Kochi Tuskers Kerala',"Kolkata Knight Riders",
+            "Kings XI Punjab", "Punjab Kings", 'Kochi Tuskers Kerala',"Kolkata Knight Riders",
                                               "Mumbai Indians", "Pune Warriors","Rajasthan Royals",
                                               "Royal Challengers Bangalore","Sunrisers Hyderabad","Gujarat Lions",
                                               "Rising Pune Supergiants")
@@ -87,7 +87,7 @@ getTeamIndex <- function(batsman,dir="."){
 
   #Load add dataframes
   teamsBatsmen = list(`Chennai Super Kings-batsmen`,`Deccan Chargers-batsmen`,`Delhi Capitals-batsmen`,`Delhi Daredevils-batsmen`,
-                      `Punjab Kings-batsmen`,`Kochi Tuskers Kerala-batsmen`,`Kolkata Knight Riders-batsmen`,
+                      `Kings XI Punjab-batsmen`,`Punjab Kings-batsmen`,`Kochi Tuskers Kerala-batsmen`,`Kolkata Knight Riders-batsmen`,
                       `Mumbai Indians-batsmen`,`Pune Warriors-batsmen`,`Rajasthan Royals-batsmen`,
                       `Royal Challengers Bangalore-batsmen`,`Sunrisers Hyderabad-batsmen`,
                       `Gujarat Lions-batsmen`,`Rising Pune Supergiants-batsmen`)
@@ -106,7 +106,7 @@ getTeamIndex <- function(batsman,dir="."){
 
 getIPLBowlers <- function(dir="."){
   teams <-c("Chennai Super Kings","Deccan Chargers","Delhi Capitals","Delhi Daredevils",
-            "Punjab Kings", 'Kochi Tuskers Kerala',"Kolkata Knight Riders",
+            "Kings XI Punjab", "Punjab Kings", 'Kochi Tuskers Kerala',"Kolkata Knight Riders",
             "Mumbai Indians", "Pune Warriors","Rajasthan Royals",
             "Royal Challengers Bangalore","Sunrisers Hyderabad","Gujarat Lions",
             "Rising Pune Supergiants")
@@ -156,7 +156,7 @@ getIPLBowlers <- function(dir="."){
 # Get the team indices of IPL teams for which the bowler as played
 getTeamIndex_bowler <- function(bowler,dir="."){
   teams <-c("Chennai Super Kings","Deccan Chargers","Delhi Capitals","Delhi Daredevils",
-            "Punjab Kings", 'Kochi Tuskers Kerala',"Kolkata Knight Riders",
+            "Kings XI Punjab", "Punjab Kings", 'Kochi Tuskers Kerala',"Kolkata Knight Riders",
             "Mumbai Indians", "Pune Warriors","Rajasthan Royals",
             "Royal Challengers Bangalore","Sunrisers Hyderabad","Gujarat Lions",
             "Rising Pune Supergiants")
@@ -178,7 +178,7 @@ getTeamIndex_bowler <- function(bowler,dir="."){
   cat("bowlerindex=",getwd(),"\n")
   #Load add dataframes
   teamsBowlers = list(`Chennai Super Kings-bowlers`,`Deccan Chargers-bowlers`,`Delhi Capitals-bowlers`,`Delhi Daredevils-bowlers`,
-                      `Punjab Kings-bowlers`,`Kochi Tuskers Kerala-bowlers`,`Kolkata Knight Riders-bowlers`,
+                      `Kings XI Punjab-bowlers`,`Punjab Kings-bowlers`,`Kochi Tuskers Kerala-bowlers`,`Kolkata Knight Riders-bowlers`,
                       `Mumbai Indians-bowlers`,`Pune Warriors-bowlers`,`Rajasthan Royals-bowlers`,
                       `Royal Challengers Bangalore-bowlers`,`Sunrisers Hyderabad-bowlers`,
                       `Gujarat Lions-bowlers`,`Rising Pune Supergiants-bowlers`)
