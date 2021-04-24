@@ -53,7 +53,7 @@ matches2TeamsFuncs <- c("Team Batsmen Batting Partnerships All Matches",
                             "Team Bowler vs Batsmen All Matches",
                             "Team Bowlers Wicket Kind All Matches",
                             "Team Bowler Wicket Runs All Matches",
-                            "Win Loss All Matches")
+                            "Win Loss Head-to-head All Matches")
 
 # Functions to analyze IPL teams' overall performance
 teamOverallPerfFunc <- c("Team Batsmen Partnerships Overall",
@@ -61,7 +61,8 @@ teamOverallPerfFunc <- c("Team Batsmen Partnerships Overall",
                            "Team Batsmen vs Bowlers Overall",
                            'Team Bowler vs Batsmen Overall',
                            "Team Bowling Scorecard Overall",
-                           "Team Bowler Wicket Kind Overall")
+                           "Team Bowler Wicket Kind Overall",
+                           "Win Loss Team vs All Opposition")
 
 
 
